@@ -1,5 +1,7 @@
 # project-3
 
+![rough wireframe](https://github.com/vbmisra/project-3/blob/main/Screen%20Shot%202022-02-23%20at%208.16.31%20PM.png?raw=true)
+
 ## Overview
 
 Welcome to your third and final group project! This project serves as your best opportunity to showcase all the skills you’ve learned throughout this course and collaborate with the community of developers you’ve cultivated over the past six months. You’ll work with your group to build a performant and scalable MERN stack single-page application that fulfills a real-world need, with a focus on data and user demand.
