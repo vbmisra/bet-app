@@ -60,7 +60,7 @@ function Signup(props) {
             name="firstName"
             type="firstName"
             id="firstName"
-            className="border rounded-lg px-3 py- mt-1 mb-1 text-sm w-full" 
+            className="border rounded-lg px-3 py-2 mt-1 mb-1 text-sm w-full" 
             onChange={handleChange}
           />
         </div>
