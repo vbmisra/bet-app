@@ -25,7 +25,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   font-size: 16px;
-  color: var(--dark);
+  /* color: var(--dark); */
 }
 
 h1,
@@ -84,7 +84,7 @@ header {
 }
 
 header a {
-  color: var(--light);
+  color: var(--black);
 }
 
 button {
@@ -96,7 +96,7 @@ button {
   outline: none;
   cursor: pointer;
   margin: 0 1px;
-  background-color: var(--secondary);
+  /* background-color: var(--secondary); */
 }
 
 button:hover {
@@ -116,9 +116,9 @@ span[role="img"] {
   cursor: default;
 }
 
-form {
+/* form {
   width: 40%;
-}
+} */
 
 input {
   font-size: 1rem;
@@ -207,4 +207,16 @@ input:focus {
   .card {
     width: 100%;
   }
+}
+
+.one:hover span:last-child {
+  width: 100%;
+}
+
+.two:hover span {
+  width: 50%;
+}
+
+.three:hover span {
+  height: 100%;
 }
