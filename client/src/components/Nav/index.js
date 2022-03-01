@@ -53,7 +53,8 @@ function Nav() {
   </div>
   <a class="btn btn-ghost normal-case text-xl">Bet</a>
   <div class="navbar-end">
-    <a class="btn">Get started</a>
+  <button className="btn"><Link to="/signup">Signup</Link></button>
+  <button className="btn"><Link to="/login">Login</Link></button>
   </div>
 </div>
       
