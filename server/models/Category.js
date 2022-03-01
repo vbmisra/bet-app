@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 // const betSchema = require('./BetItem');
+const Nominee = require('./Nominee').schema;
 
 const { Schema } = mongoose;
 
@@ -8,10 +9,10 @@ const categorySchema = new Schema({
     type: String,
   },
   nominees: [{
-    type: Schema.Types.ObjectId,
+    type: Schema.Types.String,
     ref: 'Nominee'
   }]
-  // bets: [ betSchema ]
+  // nominees: [Nominee]
 });
 
 const Category = mongoose.model('Category', categorySchema);

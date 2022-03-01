@@ -15,7 +15,6 @@ const nomineeSchema = new Schema({
     //   type: Schema.Types.ObjectId,
     //   ref: "Category"
     // }
-
   });
 
 const Nominee = mongoose.model('Nominee', nomineeSchema);

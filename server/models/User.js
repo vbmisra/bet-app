@@ -29,23 +29,14 @@ const userSchema = new Schema({
   accountBalance: {
     type: Number
   },
-  categories: [{
-    type: Schema.Types.ObjectId,
-    ref: 'Category',
+  choices: [{
+    type: Schema.Types.String,
+    ref: 'Nominee',
   },],
-  friends: [
-    {
-        type: Schema.Types.ObjectId,
-        ref: 'User',
-    },
-  ],
-
-  // moneyBet: [
-  //   {
-  //       type: Schema.Types.ObjectId,
-  //       ref: 'BetItem',
-  //   },
-  // ],
+  friends: [{
+    type: Schema.Types.String,
+    ref: 'User',
+  }],
   },
   {
     toJSON: {
