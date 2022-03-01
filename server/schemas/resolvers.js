@@ -1,14 +1,17 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Product, Category, Order } = require('../models');
+// TODO: update models based on file names
+const { User, Bet, Category, Order } = require('../models');
 const { signToken } = require('../utils/auth');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
 const resolvers = {
   Query: {
+    // find categories
     categories: async () => {
       return await Category.find();
     },
-    products: async (parent, { category, name }) => {
+    //find bets on a category
+    bets: async (parent, { category, name }) => {
       const params = {};
 
       if (category) {
@@ -21,10 +24,11 @@ const resolvers = {
         };
       }
 
-      return await Product.find(params).populate('category');
+      return await Bet.find(params).populate('category');
     },
+    // find specific bet by user
     product: async (parent, { _id }) => {
-      return await Product.findById(_id).populate('category');
+      return await Bet.findById(_id).populate('category');
     },
     user: async (parent, args, context) => {
       if (context.user) {
@@ -118,7 +122,7 @@ const resolvers = {
     updateProduct: async (parent, { _id, quantity }) => {
       const decrement = Math.abs(quantity) * -1;
 
-      return await Product.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
+      return await Bet.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
     },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
