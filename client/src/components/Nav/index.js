@@ -1,6 +1,6 @@
-import React from 'react';
-import Auth from '../../utils/auth';
-import { Link } from 'react-router-dom';
+import React from "react";
+import Auth from "../../utils/auth";
+import { Link } from "react-router-dom";
 
 function Nav() {
   function showNavigation() {
@@ -20,31 +20,43 @@ function Nav() {
       );
     } else {
       return (
-        <ul className="flex-row">
-          <li className="mx-1">
+        <div className="navbar-end text-neutral-content">
+          <li>
             <Link to="/signup">Signup</Link>
           </li>
-          <li className="mx-1">
-            <Link to="/login">Login</Link>
+          <li>
+          <Link to="/login">Login</Link>
           </li>
-        </ul>
+        </div>
       );
     }
   }
 
   return (
-    <header className="flex-row px-1">
-      <h1>
-        <Link to="/">
-          <span role="img" aria-label="shopping bag">
-            🛍️
-          </span>
-          -Shop-Shop
-        </Link>
-      </h1>
-
-      <nav>{showNavigation()}</nav>
-    </header>
+<div class="navbar bg-base-100">
+  <div class="navbar-start">      
+    <ul class="menu menu-horizontal p-0">
+      <li tabindex="0">
+          <label class="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+      </label>
+        <ul class="p-2">
+        <li>
+            <Link to="/signup">Signup</Link>
+          </li>
+          <li>
+          <Link to="/login">Login</Link>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <a class="btn btn-ghost normal-case text-xl">Bet</a>
+  <div class="navbar-end">
+    <a class="btn">Get started</a>
+  </div>
+</div>
+      
   );
 }
 
