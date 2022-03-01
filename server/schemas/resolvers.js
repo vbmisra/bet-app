@@ -11,21 +11,21 @@ const resolvers = {
       return await Category.find();
     },
     //find bets on a category
-    bets: async (parent, { category, name }) => {
-      const params = {};
+    // bets: async (parent, { category, name }) => {
+    //   const params = {};
 
-      if (category) {
-        params.category = category;
-      }
+    //   if (category) {
+    //     params.category = category;
+    //   }
 
-      if (name) {
-        params.name = {
-          $regex: name
-        };
-      }
+    //   if (name) {
+    //     params.name = {
+    //       $regex: name
+    //     };
+    //   }
 
-      return await Bet.find(params).populate('category');
-    },
+    //   return await Bet.find(params).populate('category');
+    // },
     // find specific bet by user
     product: async (parent, { _id }) => {
       return await Bet.findById(_id).populate('category');
@@ -100,18 +100,18 @@ const resolvers = {
 
       return { token, user };
     },
-    addOrder: async (parent, { products }, context) => {
-      console.log(context);
-      if (context.user) {
-        const order = new Order({ products });
+    // addOrder: async (parent, { products }, context) => {
+    //   console.log(context);
+    //   if (context.user) {
+    //     const order = new Order({ products });
 
-        await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
+    //     await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
 
-        return order;
-      }
+    //     return order;
+    //   }
 
-      throw new AuthenticationError('Not logged in');
-    },
+    //   throw new AuthenticationError('Not logged in');
+    // },
     updateUser: async (parent, args, context) => {
       if (context.user) {
         return await User.findByIdAndUpdate(context.user._id, args, { new: true });
