@@ -18,5 +18,8 @@
   },
   "engines": {
     "npm": "7.x"
+  },
+  "dependencies": {
+    "@heroicons/react": "^1.0.5"
   }
 }
