@@ -18,5 +18,8 @@
   },
   "engines": {
     "npm": "7.x"
+  },
+  "dependencies": {
+    "survey-react": "^1.9.18"
   }
 }
