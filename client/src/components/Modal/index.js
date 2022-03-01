@@ -46,11 +46,17 @@ export default function Modal() {
                 <div className="relative p-6 flex-auto">
                 <fieldset>
       <legend className="text-lg font-medium text-gray-900">nominees</legend>
-      <div className="mt-4 border-t border-b border-gray-200 divide-y divide-gray-200">
+      <div 
+      className="mt-4 border-t border-b border-gray-200 divide-y divide-gray-200">
         {nominees.map((nominees, nomineesIdx) => (
-          <div key={nomineesIdx} className="relative flex items-start py-4">
-            <div className="min-w-0 flex-1 text-sm">
-              <label htmlFor={`nominees-${nominees.id}`} className="font-medium text-gray-700 select-none">
+          <div 
+          key={nomineesIdx} 
+          className="relative flex items-start py-4">
+            <div 
+            className="min-w-0 flex-1 text-sm">
+              <label 
+              htmlFor={`nominees-${nominees.id}`} 
+              className="font-medium text-gray-700 select-none">
                 {nominees.name}
               </label>
             </div>
