@@ -78,6 +78,56 @@ db.once('open', async () => {
     {nominee: "Luca",  money: 0},
     {nominee: "The Mitchells vs. The Machines",  money: 0},
     {nominee: "Raya and the Last Dragon",  money: 0},
+    {nominee: "Greig Fraser, Dune",  money: 0},
+    {nominee: "Dan Laustsen, Nightmare Alley",  money: 0},
+    {nominee: "Ari Wegner, The Power of the Dog",  money: 0},
+    {nominee: "Bruno Delbonnel, The Tragedy of Macbeth",  money: 0},
+    {nominee: "Janusz Kaminski, West Side Story",  money: 0},
+    {nominee: "Jenny Beavan, Cruella",  money: 0},
+    {nominee: "Massimo Cantini Parrini and Jacqueline Durran, Cyrano",  money: 0},
+    {nominee: "Jacqueline West and Robert Morgan, Dune",  money: 0},
+    {nominee: "Luis Sequeira, Nightmare Alley",  money: 0},
+    {nominee: "Paul Tazewell, West Side Story",  money: 0},
+    {nominee: "Ascension",  money: 0},
+    {nominee: "Attica",  money: 0},
+    {nominee: "Flee",  money: 0},
+    {nominee: "Summer of Soul",  money: 0},
+    {nominee: "Writing With Fire",  money: 0},
+    {nominee: "Audible",  money: 0},
+    {nominee: "Lead Me Home",  money: 0},
+    {nominee: "The Queen of Basketball",  money: 0},
+    {nominee: "Three Songs For Benazir",  money: 0},
+    {nominee: "When We Were Bullies",  money: 0},
+    {nominee: "Hank Corwin, Don't Look Up",  money: 0},
+    {nominee: "Joe Walker, Dune",  money: 0},
+    {nominee: "Pamela Martin, King Richard",  money: 0},
+    {nominee: "Peter Sciberras, The Power of the Dog",  money: 0},
+    {nominee: "Myron Kerstein and Andrew Weisblub, Tick, Tick... Boom!",  money: 0},
+    {nominee: "Drive My Car",  money: 0},
+    {nominee: "Flee",  money: 0},
+    {nominee: "The Hand of God",  money: 0},
+    {nominee: "Lunana: A Yak in the Classroom",  money: 0},
+    {nominee: "The Worst Person in the World",  money: 0},
+    {nominee: "Coming 2 America",  money: 0},
+    {nominee: "Cruella",  money: 0},
+    {nominee: "Dune",  money: 0},
+    {nominee: "The Eyes of Tammy Faye",  money: 0},
+    {nominee: "House of Gucci",  money: 0},
+    {nominee: "Dune",  money: 0},
+    {nominee: "Nightmare Alley",  money: 0},
+    {nominee: "The Power of the Dog",  money: 0},
+    {nominee: "The Tragedy of Macbeth",  money: 0},
+    {nominee: "West Side Story",  money: 0},
+    {nominee: "Affairs of the Art",  money: 0},
+    {nominee: "Bestia",  money: 0},
+    {nominee: "Boxballet",  money: 0},
+    {nominee: "Robin Robin",  money: 0},
+    {nominee: "The Windshield Wiper",  money: 0},
+    {nominee: "Ala Kachuu - Take and Run",  money: 0},
+    {nominee: "The Dress",  money: 0},
+    {nominee: "The Long Goodbye",  money: 0},
+    {nominee: "On My Mind",  money: 0},
+    {nominee: "Please Hold",  money: 0},
   ]);  
 
   console.log('nominees seeded');
@@ -187,6 +237,86 @@ db.once('open', async () => {
   }
   getBestAnimatedFilm()
 
+  bestCinematography = []
+  const getBestCinematography = () => {
+    for (let i = 70; i < 75; i++) {
+      bestCinematography.push(nominees.ops[i].nominee)
+    }  
+  }
+  getBestCinematography()
+
+  bestCostumeDesign = []
+  const getBestCostumeDesign = () => {
+    for (let i = 75; i < 80; i++) {
+      bestCostumeDesign.push(nominees.ops[i].nominee)
+    }  
+  }
+  getBestCostumeDesign()
+
+  bestDocumentary = []
+  const getBestDocumentary = () => {
+    for (let i = 80; i < 85; i++) {
+      bestDocumentary.push(nominees.ops[i].nominee)
+    }  
+  }
+  getBestDocumentary()
+
+  bestShortDocumentary = []
+  const getBestShortDocumentary = () => {
+    for (let i = 85; i < 90; i++) {
+      bestShortDocumentary.push(nominees.ops[i].nominee)
+    }  
+  }
+  getBestShortDocumentary()
+
+  bestEditing = []
+  const getBestEditing = () => {
+    for (let i = 90; i < 95; i++) {
+      bestEditing.push(nominees.ops[i].nominee)
+    }  
+  }
+  getBestEditing()
+
+  bestInternationalFilm = []
+  const getBestInternationalFilm = () => {
+    for (let i = 95; i < 100; i++) {
+      bestInternationalFilm.push(nominees.ops[i].nominee)
+    }  
+  }
+  getBestInternationalFilm()
+
+  bestMakeupAndHairstyling = []
+  const getBestMakeupAndHairstyling = () => {
+    for (let i = 100; i < 105; i++) {
+      bestMakeupAndHairstyling.push(nominees.ops[i].nominee)
+    }  
+  }
+  getBestMakeupAndHairstyling()
+
+  bestProductionDesign = []
+  const getBestProductionDesign = () => {
+    for (let i = 105; i < 110; i++) {
+      bestProductionDesign.push(nominees.ops[i].nominee)
+    }  
+  }
+  getBestProductionDesign()
+
+  bestAnimatedShortFilm = []
+  const getBestAnimatedShortFilm = () => {
+    for (let i = 110; i < 115; i++) {
+      bestAnimatedShortFilm.push(nominees.ops[i].nominee)
+    }  
+  }
+  getBestAnimatedShortFilm()
+
+  bestLiveActionShortFilm = []
+  const getBestLiveActionShortFilm = () => {
+    for (let i = 115; i < 120; i++) {
+      bestLiveActionShortFilm.push(nominees.ops[i].nominee)
+    }  
+  }
+  getBestLiveActionShortFilm()
+
  
   const categories = await Category.collection.insertMany([
     {title: "Best Picture", nominees: bestPicture},
@@ -202,6 +332,16 @@ db.once('open', async () => {
     {title: "Best Sound", nominees: bestSound },
     {title: "Best Original Song", nominees: bestOriginalSong },
     {title: "Best Animated Film", nominees: bestAnimatedFilm },
+    {title: "Best Cinematography", nominees: bestCinematography },
+    {title: "Best Costume Design", nominees: bestCostumeDesign },
+    {title: "Best Documentary", nominees: bestDocumentary },
+    {title: "Best Short Documentary", nominees: bestShortDocumentary },
+    {title: "Best Editing", nominees: bestEditing },
+    {title: "Best International Film", nominees: bestInternationalFilm },
+    {title: "Best Makeup and Hairstyling", nominees: bestMakeupAndHairstyling },
+    {title: "Best Production Design", nominees: bestProductionDesign },
+    {title: "Best Animated Short Film", nominees: bestAnimatedShortFilm },
+    {title: "Best Live Action Short Film", nominees: bestLiveActionShortFilm },
   ]);
 
   console.log('categories seeded');
