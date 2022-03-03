@@ -71,7 +71,7 @@ function Login(props) {
         ) : null}
             <button 
             type="submit" 
-            class="btn btn-warning">
+            class="btn">
                 <span 
                 class="inline-block mr-2">
                   Login

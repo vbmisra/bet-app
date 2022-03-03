@@ -1,17 +1,22 @@
+
+
 import React from "react";
-import Jumbotron from "../components/Modal";
+import Modal from "../Modal/index";
+import Page1 from './components/Form/page1';
+
+
 
 const NoMatch = () => {
   return (
     <div>
-      <Jumbotron>
+      <Modal>
         <h1>404 Page Not Found</h1>
         <h1>
           <span role="img" aria-label="Face With Rolling Eyes Emoji">
             🙄
           </span>
         </h1>
-      </Jumbotron>
+      </Modal>
     </div>
   );
 };
