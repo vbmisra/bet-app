@@ -29,12 +29,12 @@ const userSchema = new Schema({
   accountBalance: {
     type: Number
   },
-  choices: [{
-    type: Schema.Types.String,
+  Choices: [{
+    type: Schema.Types.ObjectId,
     ref: 'Nominee',
   },],
-  friends: [{
-    type: Schema.Types.String,
+  Friends: [{
+    type: Schema.Types.ObjectId,
     ref: 'User',
   }],
   },

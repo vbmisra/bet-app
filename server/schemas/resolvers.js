@@ -188,25 +188,25 @@ const resolvers = {
     // ** nice to have **
     addNominee: async (parent, args, context) => {
       const nominee = await Nominee.create(args)
-      await Category.findByNameAndUpdate(context.category._id, { $push: { nominees: nominee } })
+      await Category.findOneAndUpdate(context.category._id, { $push: { nominees: nominee } })
       return nominee
     },
     // **** TODO: bet money on nominee
     betMoney: async (parent, { bet }, context) => {
       // update user bets
       if (context.user) {
-        const user = await User.findOne({_id: context.user._id})
-        const currentBalance = user.accountBalance
-        const newBalance = currentBalance - bet
+        // const user = await User.findOne({_id: context.user._id})
+        // const currentBalance = user.accountBalance
+        // const newBalance = currentBalance - bet
         // return User.findByIdAndUpdate(context.user._id, { $push: { accountBalance: newBalance } })
         
         const nominee = await Nominee.findOne({_id: context.user.Choices._id})
         const nomineeBalance = nominee.money
         const newNomBalance = nomineeBalance + bet
-       await User.findOneAndUpdate(context.user._id, { $set: { accountBalance: newBalance } }) ;
+      //  await User.findOneAndUpdate(context.user._id, { $set: { accountBalance: newBalance } }) ;
        await Nominee.findOneAndUpdate(context.nominee._id, { $set: { money: newNomBalance } });
 
-       return {newBalance, newNomBalance}
+       return {newNomBalance}
         
       }
 
@@ -237,7 +237,7 @@ const resolvers = {
         const user = await User.findOne({_id: context.user._id})
         const currentBalance= user.accountBalance
         const newBalance = currentBalance + amount
-        return User.findOneAndUpdate(context.user._id, { $set: { accountBalance: newBalance } })
+        return await User.findOneAndUpdate(context.user._id, { $set: { accountBalance: newBalance } })
       }
 
       throw new AuthenticationError('No user logged in')
@@ -249,7 +249,7 @@ const resolvers = {
         const user = await User.findOne({_id: context.user._id})
         const currentBalance = user.accountBalance
         const newBalance = currentBalance - amount
-        return User.findOneAndUpdate(context.user._id, { $set: { accountBalance: newBalance } })
+        return await User.findOneAndUpdate(context.user._id, { $set: { accountBalance: newBalance } })
       }
 
       throw new AuthenticationError('No user logged in')
@@ -260,7 +260,7 @@ const resolvers = {
       if (context.user) {
         //const currentBalance = await User.findById(context.user._id).accountBalance
         const newBalance = 0
-        return User.findByOneAndUpdate(context.user._id, { $set: { accountBalance: newBalance } })
+        return await User.findOneAndUpdate(context.user._id, { $set: { accountBalance: newBalance } })
       }
 
       throw new AuthenticationError('No user logged in')

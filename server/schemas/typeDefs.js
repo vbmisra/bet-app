@@ -68,11 +68,11 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     addCategory(title: String!): Category
     addNominee(nominee: String!): Nominee
-    betMoney(money: Int!): Nominee
+    betMoney(_id: ID!, bet: Int!): Nominee
     addFriend(_id: ID!): User
     pickNominee(_id: ID!): User
-    addToBalance(_id: ID!): User
-    reduceBalance(_id: ID!): User
+    addToBalance(_id: ID!, amount: Int!): User
+    reduceBalance(_id: ID!, amount: Int!): User
     withdrawBalance( _id: ID!): User
     updateCategory: Category
     deleteUser(_id: ID!): User
