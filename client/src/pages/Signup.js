@@ -43,7 +43,7 @@ function Signup(props) {
 </div>
 </div>
 
-<div className="shadow-lg rounded max-w-full h-auto align-middle border-none ">
+<div className="shadow-lg rounded max-w-full h-auto align-middle border- ">
           <div className="px-5 py-3">
 
       <form onSubmit={handleFormSubmit}>
