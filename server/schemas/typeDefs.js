@@ -7,22 +7,6 @@ const typeDefs = gql`
     nominees: [String]
   }
 
-  type Product {
-    _id: ID
-    name: String
-    description: String
-    image: String
-    quantity: Int
-    price: Float
-    category: Category
-  }
-
-  type Order {
-    _id: ID
-    purchaseDate: String
-    products: [Product]
-  }
-
   type Nominee {
     _id: ID
     nominee: String!
@@ -35,8 +19,8 @@ const typeDefs = gql`
     email: String!
     password: String!
     accountBalance: Int
-    Choices: [String]
-    Friends: [String]
+    Choices: [Nominee]
+    Friends: [User]
   }
 
   type Checkout {
@@ -49,19 +33,49 @@ const typeDefs = gql`
   }
 
   type Query {
-    categories: [Category]
-    products(category: ID, name: String): [Product]
-    product(_id: ID!): Product
     user: User
-    order(_id: ID!): Order
-    checkout(products: [ID]!): Checkout
+    users: [User]
+    friends(_id: ID!): User
+    userBalance: User
+    picture: Category
+    director: Category
+    actor: Category
+    actress: Category
+    supportingactor: Category
+    supportingactress: Category
+    animatedfeaturefilm: Category
+    animatedshortfilm: Category
+    cinematography: Category
+    costumedesign: Category
+    documentaryfeature: Category
+    documentaryshortsubject: Category
+    filmediting: Category
+    internationalfeaturefilm: Category
+    liveactionshortfilm: Category
+    makeup: Category
+    originalscore: Category
+    originalsong: Category
+    productiondesign: Category
+    sound: Category
+    visualeffects: Category
+    adaptedscreenplay: Category
+    originalscreenplay: Category
+    addFunds: User
   }
 
   type Mutation {
-    addUser(userName: String!, email: String!, password: String!): Auth
-    updateUser(firstName: String, lastName: String, email: String, password: String): User
-    updateProduct(_id: ID!, quantity: Int!): Product
+    addUser(userName: String!, email: String!, password: String!): User
     login(email: String!, password: String!): Auth
+    addCategory(title: String!): Category
+    addNominee(nominee: String!): Nominee
+    betMoney(money: Int!): Nominee
+    addFriend(_id: ID!): User
+    pickNominee(_id: ID!): User
+    addToBalance(_id: ID!): User
+    reduceBalance(_id: ID!): User
+    withdrawBalance( _id: ID!): User
+    updateCategory: Category
+    deleteUser(_id: ID!): User
   }
 `;
 
