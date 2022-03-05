@@ -10,7 +10,7 @@ var validateEmail = function(email) {
 };
 
 const userSchema = new Schema({
-  username: {
+  userName: {
     type: String,
     required: true,
     trim: true

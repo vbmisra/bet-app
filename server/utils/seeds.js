@@ -347,11 +347,19 @@ db.once('open', async () => {
   console.log('categories seeded');
 
   await User.create({
-    username: 'test',
+    userName: 'test',
     email: 'test@test.com',
     password: '123456',
     accountBalance: 100,
-    choices: [nominees.ops[0].nominee,nominees.ops[1].nominee]
+    choices: [nominees.ops[0].nominee,nominees.ops[20].nominee]
+  });
+
+  await User.create({
+    userName: 'test222',
+    email: 'test222@test.com',
+    password: '123456',
+    accountBalance: 100,
+    choices: [nominees.ops[10].nominee,nominees.ops[50].nominee]
   });
 
   console.log('users seeded');

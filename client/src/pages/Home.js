@@ -1,19 +1,21 @@
 import React from "react";
-import Balance from "../components/Balance"
-import Tabs from "../components/Tabs"
-import YourBets from "../components/YourBets";
+import Overview from "../components/Overview"
+import TabsContainer from "../components/TabsContainer"
+import Separator from "../components/Separator";
 
 
+//Logged In//
 
 const Home = () => {
   return (
     <div className="container">
-      <Balance />
-      <Tabs />
-      <YourBets />
+      <Overview />
+      <Separator />
+      <TabsContainer />
     </div>
   );
-};
 
-
+}
 export default Home;
+
+

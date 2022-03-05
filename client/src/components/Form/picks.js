@@ -5,8 +5,6 @@ import Modal from "../Modal/index";
 
 
 
-
-
 const NoMatch = () => {
   return (
     <div>

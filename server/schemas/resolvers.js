@@ -9,30 +9,25 @@ const resolvers = {
     // query user
     user: async(parent, args, context) => {
       if (context.user) {
-        const user = await User.findById(context.user._id).populate({
-          path: 'user.choices',
-          populate: 'nominee'
-        },
-        {
-          path: 'user.friends',
-          populate: 'username'
-        })
+        const user = await User.findOne({_id: context.user._id}).select('-__v -password')
 
-        user.choices.sort((a, b) => b.money - a.money)
+        // user.choices.sort((a, b) => b.money - a.money)
 
         // user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate)
         return user
       }
+      throw new AuthenticationError('not logged in')
     },
-    // query specific nominee
-    // nominee: async () => {
-      
-    // },
+
+    users: async (parent, args, context) => {
+      return await User.find({})
+    },
+
     // query friends
     friends: async (parent, args, context) => {
       if (context.user) {
-        const friends = await User.findById(context.user._id).friends
-
+        const user = await User.findOne({_id: context.user._id})
+        const friends = user.Friends
         return friends
       }
 
@@ -41,8 +36,8 @@ const resolvers = {
     // query user balance
     userBalance: async (parent, args, context) => {
       if (context.user) {
-        const balance = await User.findById(context.user._id).accountBalance
-
+        const user = await User.findOne({_id: context.user._id})
+        const balance = user.accountBalance
         return balance
       }
 
@@ -199,14 +194,19 @@ const resolvers = {
     // **** TODO: bet money on nominee
     betMoney: async (parent, { bet }, context) => {
       // update user bets
-      if (context.user && context.nominee) {
-        const currentBalance = await User.findById(context.user._id).accountBalance
+      if (context.user) {
+        const user = await User.findOne({_id: context.user._id})
+        const currentBalance = user.accountBalance
         const newBalance = currentBalance - bet
         // return User.findByIdAndUpdate(context.user._id, { $push: { accountBalance: newBalance } })
         
-        const nomineeBalance = await Nominee.findById(context.nominee._id).money
+        const nominee = await Nominee.findOne({_id: context.user.Choices._id})
+        const nomineeBalance = nominee.money
         const newNomBalance = nomineeBalance + bet
-        return User.findByIdAndUpdate(context.user._id, { $push: { accountBalance: newBalance } }) && Nominee.findByIdAndUpdate(context.nominee._id, { $push: { money: newNomBalance } })
+       await User.findOneAndUpdate(context.user._id, { $set: { accountBalance: newBalance } }) ;
+       await Nominee.findOneAndUpdate(context.nominee._id, { $set: { money: newNomBalance } });
+
+       return {newBalance, newNomBalance}
         
       }
 
@@ -214,9 +214,18 @@ const resolvers = {
     },
     // **** TODO: add friend
     addFriend: async (parent, args, context) => {
-      const friend = await User.findById(args._id)
+      const friend = await User.findOne({_id: args._id})
       if (context.user) {
-        return await User.findByIdAndUpdate(context.user._id, { $push: { friends: friend } }) 
+        return await User.findOneAndUpdate(context.user._id, { $push: { Friends: friend } }) 
+      }
+
+      throw new AuthenticationError('no user found')
+    },
+
+    pickNominee: async (parent, args, context) => {
+      const nominee = await Nominee.findOne({_id: args._id})
+      if (context.user) {
+        return await User.findOneAndUpdate(context.user._id, { $push: { Choices: nominee } }) 
       }
 
       throw new AuthenticationError('no user found')
@@ -225,9 +234,10 @@ const resolvers = {
     addToBalance: async (parent, { amount }, context) => {
       // add money to user balance
       if (context.user) {
-        const currentBalance = await User.findById(context.user._id).accountBalance
+        const user = await User.findOne({_id: context.user._id})
+        const currentBalance= user.accountBalance
         const newBalance = currentBalance + amount
-        return User.findByIdAndUpdate(context.user._id, { $push: { accountBalance: newBalance } })
+        return User.findOneAndUpdate(context.user._id, { $set: { accountBalance: newBalance } })
       }
 
       throw new AuthenticationError('No user logged in')
@@ -236,9 +246,10 @@ const resolvers = {
     reduceBalance: async (parent, { amount }, context) => {
       // add money to user balance
       if (context.user) {
-        const currentBalance = await User.findById(context.user._id).accountBalance
+        const user = await User.findOne({_id: context.user._id})
+        const currentBalance = user.accountBalance
         const newBalance = currentBalance - amount
-        return User.findByIdAndUpdate(context.user._id, { $push: { accountBalance: newBalance } })
+        return User.findOneAndUpdate(context.user._id, { $set: { accountBalance: newBalance } })
       }
 
       throw new AuthenticationError('No user logged in')
@@ -249,7 +260,7 @@ const resolvers = {
       if (context.user) {
         //const currentBalance = await User.findById(context.user._id).accountBalance
         const newBalance = 0
-        return User.findByIdAndUpdate(context.user._id, { $push: { accountBalance: newBalance } })
+        return User.findByOneAndUpdate(context.user._id, { $set: { accountBalance: newBalance } })
       }
 
       throw new AuthenticationError('No user logged in')
@@ -257,7 +268,7 @@ const resolvers = {
     // edit category
     updateCategory: async(parent, args, context) => {
       if (context.category) {
-        return Category.findByIdAndUpdate(context.category._id, { $push: args })
+        return Category.findOneAndUpdate(context.category._id, { $push: args })
       }
 
       throw new AuthenticationError('category no category selected')
@@ -266,7 +277,7 @@ const resolvers = {
     // ** nice to have **
     deleteUser: async(parent, args, context) => {
       if (context.user) {
-        return User.findByIdAndDelete(context.user._id)
+        return User.findOneAndDelete({_id: context.user._id})
       }
 
       throw new AuthenticationError('no existing user selected')

@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const nominees = [
   { id: null, name: 'None' },
   { id: 1, name: 'Will Smith' },
