@@ -2,7 +2,6 @@
 
 import React from "react";
 import Modal from "../Modal/index";
-import Page1 from './components/Form/page1';
 
 
 

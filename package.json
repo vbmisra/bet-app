@@ -20,6 +20,7 @@
     "npm": "7.x"
   },
   "dependencies": {
+    "@heroicons/react": "^1.0.6",
     "survey-react": "^1.9.18"
   }
 }
