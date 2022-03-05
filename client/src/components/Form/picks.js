@@ -2,7 +2,7 @@
 
 import React from "react";
 import Modal from "../Modal/index";
-import { Link } from 'react-router-dom';
+
 
 
 
