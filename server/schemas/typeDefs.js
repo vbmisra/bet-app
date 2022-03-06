@@ -9,13 +9,13 @@ const typeDefs = gql`
 
   type Nominee {
     _id: ID
-    nominee: String!
+    nominee: String
     money: Int
   }
 
   type User {
     _id: ID
-    userName: String!
+    userName: String
     email: String!
     password: String!
     accountBalance: Int
@@ -41,7 +41,7 @@ const typeDefs = gql`
     director: Category
     actor: Category
     actress: Category
-    supportingactor: Category
+    supportingactor: Category 
     supportingactress: Category
     animatedfeaturefilm: Category
     animatedshortfilm: Category

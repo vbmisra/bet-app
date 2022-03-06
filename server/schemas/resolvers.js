@@ -192,7 +192,7 @@ const resolvers = {
       return nominee
     },
     // **** TODO: bet money on nominee
-    betMoney: async (parent, { bet }, context) => {
+    betMoney: async (parent, { _id, bet }, context) => {
       // update user bets
       if (context.user) {
         // const user = await User.findOne({_id: context.user._id})
@@ -200,11 +200,11 @@ const resolvers = {
         // const newBalance = currentBalance - bet
         // return User.findByIdAndUpdate(context.user._id, { $push: { accountBalance: newBalance } })
         
-        const nominee = await Nominee.findOne({_id: context.user.Choices._id})
+        const nominee = await Nominee.findById(_id)
         const nomineeBalance = nominee.money
         const newNomBalance = nomineeBalance + bet
       //  await User.findOneAndUpdate(context.user._id, { $set: { accountBalance: newBalance } }) ;
-       await Nominee.findOneAndUpdate(context.nominee._id, { $set: { money: newNomBalance } });
+       await Nominee.findByIdAndUpdate(_id, { $set: { money: newNomBalance } });
 
        return {newNomBalance}
         
