@@ -351,7 +351,6 @@ db.once('open', async () => {
     email: 'test@test.com',
     password: '123456',
     accountBalance: 100,
-    choices: [nominees.ops[0].nominee,nominees.ops[20].nominee]
   });
 
   await User.create({
@@ -359,7 +358,6 @@ db.once('open', async () => {
     email: 'test222@test.com',
     password: '123456',
     accountBalance: 100,
-    choices: [nominees.ops[10].nominee,nominees.ops[50].nominee]
   });
 
   console.log('users seeded');

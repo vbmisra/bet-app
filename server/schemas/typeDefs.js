@@ -9,13 +9,13 @@ const typeDefs = gql`
 
   type Nominee {
     _id: ID
-    nominee: String!
+    nominee: String
     money: Int
   }
 
   type User {
     _id: ID
-    userName: String!
+    userName: String
     email: String!
     password: String!
     accountBalance: Int
@@ -41,7 +41,7 @@ const typeDefs = gql`
     director: Category
     actor: Category
     actress: Category
-    supportingactor: Category
+    supportingactor: Category 
     supportingactress: Category
     animatedfeaturefilm: Category
     animatedshortfilm: Category
@@ -68,11 +68,11 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     addCategory(title: String!): Category
     addNominee(nominee: String!): Nominee
-    betMoney(money: Int!): Nominee
+    betMoney(_id: ID!, bet: Int!): Nominee
     addFriend(_id: ID!): User
     pickNominee(_id: ID!): User
-    addToBalance(_id: ID!): User
-    reduceBalance(_id: ID!): User
+    addToBalance(_id: ID!, amount: Int!): User
+    reduceBalance(_id: ID!, amount: Int!): User
     withdrawBalance( _id: ID!): User
     updateCategory: Category
     deleteUser(_id: ID!): User
