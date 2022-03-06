@@ -11,10 +11,9 @@ const nomineeSchema = new Schema({
     money: {
       type: Number, 
     },
-    // category: {
-    //   type: Schema.Types.ObjectId,
-    //   ref: "Category"
-    // }
+    category: {
+      type: String
+    }
   });
 
 const Nominee = mongoose.model('Nominee', nomineeSchema);
