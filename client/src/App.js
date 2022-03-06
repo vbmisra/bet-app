@@ -21,8 +21,9 @@ import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
 // import PickForm from './pages/PickForm';
 import Page1 from './components/Form/page1';
-import Picks from './components/Form/picks';
-import Modal from './components/Modal/index';
+// import Picks from './components/Form/picks';
+import Modal from './components/Form/page2';
+import classy from './components/Form/page3';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -58,7 +59,8 @@ function App() {
               <Route exact path="/success" component={Success} />
               <Route exact path="/orderHistory" component={OrderHistory} />
               <Route exact path="/page1" component={Page1} />
-              <Route exact path="/picks" component={Picks} />
+              <Route exact path="/page2" component={Modal} />
+              <Route exact path="/page3" component={classy} />
               <Route exact path="/products/:id" component={Detail} />
               <Route component={NoMatch} />
               <Route component={Modal} />
