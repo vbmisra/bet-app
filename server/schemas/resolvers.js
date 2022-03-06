@@ -1,6 +1,6 @@
 const { AuthenticationError } = require('apollo-server-express');
 // TODO: update models based on file names
-const { User, Nominee, Category } = require('../models');
+const { User, Nominee, Category, Bet } = require('../models');
 const { signToken } = require('../utils/auth');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
@@ -21,6 +21,23 @@ const resolvers = {
 
     users: async (parent, args, context) => {
       return await User.find({})
+    },
+
+    bet: async (parent, { _id }, context) => {
+      if (context.user) {
+        // const user = await User.findById(context.user._id).populate(
+        //   {
+        //     path: 'choices.nominees',
+        //     populate: 'category'
+        //   }
+        // )
+        
+        const user = await User.findById(context.user._id)
+
+        return user.bets.id(_id)
+      }
+
+      throw new AuthenticationError('Not logged in')
     },
 
     // query friends
@@ -161,6 +178,17 @@ const resolvers = {
 
       return { token, user }
     },
+    addBet: async (parent, { nominees }, context) => {
+      if (context.user) {
+        const bet = new Bet({ nominees })
+
+        await User.findByIdAndUpdate(context.user._id, { $push: { choices: bet } })
+        
+        return bet
+      }
+
+      throw new AuthenticationError('Not logged in')
+    },
     // login
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email })
@@ -191,7 +219,6 @@ const resolvers = {
       await Category.findOneAndUpdate(context.category._id, { $push: { nominees: nominee } })
       return nominee
     },
-    // **** TODO: bet money on nominee
     betMoney: async (parent, { _id, bet }, context) => {
       // update user bets
       if (context.user) {
@@ -212,7 +239,6 @@ const resolvers = {
 
       throw new AuthenticationError('No user logged in')
     },
-    // **** TODO: add friend
     addFriend: async (parent, args, context) => {
       const friend = await User.findOne({_id: args._id})
       if (context.user) {

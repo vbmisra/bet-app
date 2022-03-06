@@ -31,7 +31,7 @@ const userSchema = new Schema({
   },
   Choices: [{
     type: Schema.Types.ObjectId,
-    ref: 'Nominee',
+    ref: 'Bet',
   }],
   Friends: [{
     type: Schema.Types.ObjectId,
