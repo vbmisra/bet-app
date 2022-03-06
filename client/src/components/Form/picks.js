@@ -1,7 +1,13 @@
 
 
+<<<<<<< Updated upstream
 // import React from "react";
 // import Modal from "./page2";
+=======
+import React from "react";
+import Modal from "../Modal/index";
+// import Page1 from '../Form/page1';
+>>>>>>> Stashed changes
 
 
 
