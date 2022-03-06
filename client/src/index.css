@@ -32,7 +32,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   font-size: 16px;
-  color: var(--dark);
+  /* color: var(--dark); */
 }
 
 h1,
@@ -87,11 +87,11 @@ a:hover {
 }
 
 header {
-  background: var(--primary);
+  /* background: var(--primary); */
 }
 
 header a {
-  color: var(--black);
+  /* color: var(--black); */
 }
 
 button {
