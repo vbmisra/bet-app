@@ -7,9 +7,13 @@ export const QUERY_USER = gql`
       email
       accountBalance
       Choices {
-        nominee
+        _id
+        nominees {
+          nominee
+        }
       }
       Friends {
+        _id
         userName
       }
     }
@@ -21,14 +25,29 @@ export const QUERY_USERS = gql`
     users {
       userName
       Choices {
+        _id
         nominee
       }
       Friends {
+        _id
         userName
       }
     }
   }
 `;
+
+export const QUERY_BETS = gql`
+  query bet ($_id:ID!) {
+    bet(_id:$_id) {
+      _id
+      money
+      nominees {
+        _id
+        nominee
+      }
+    }
+  }
+`
 
 export const QUERY_PICTURE = gql`
   {
