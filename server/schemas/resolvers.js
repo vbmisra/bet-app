@@ -10,7 +10,14 @@ const resolvers = {
     user: async(parent, args, context) => {
       if (context.user) {
         const user = await User.findOne({_id: context.user._id}).select('-__v -password')
+        // .populate(
+        //   {
+        //     path: 'Choices.nominees',
+        //     populate: 'nominee'
+        //   }
+        // )
 
+       
         // user.choices.sort((a, b) => b.money - a.money)
 
         // user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate)
@@ -23,18 +30,19 @@ const resolvers = {
       return await User.find({})
     },
 
-    bet: async (parent, { _id }, context) => {
+    bet: async (parent, args, context) => {
       if (context.user) {
-        // const user = await User.findById(context.user._id).populate(
-        //   {
-        //     path: 'choices.nominees',
-        //     populate: 'category'
-        //   }
-        // )
+        const bet = await Bet.findOne({_id: args._id})
+        const user = await User.findById(context.user._id).populate(
+          {
+            path: 'Choices.nominees',
+            populate: 'nominee'
+          }
+        )
         
-        const user = await User.findById(context.user._id)
-
-        return user.bets.id(_id)
+        // const user = await User.findById(context.user._id)
+        
+        return bet
       }
 
       throw new AuthenticationError('Not logged in')
@@ -178,11 +186,17 @@ const resolvers = {
 
       return { token, user }
     },
-    addBet: async (parent, { nominees }, context) => {
+    addBet: async (parent, args, context) => {
       if (context.user) {
-        const bet = new Bet({ nominees })
+        const bet = await Bet.create(args)
 
-        await User.findByIdAndUpdate(context.user._id, { $push: { choices: bet } })
+        await User.findByIdAndUpdate(context.user._id, { $push: { Choices: bet } })
+        // await User.findById(context.user._id).populate(
+        //   {
+        //     path: 'Choices.nominees',
+        //     populate: 'nominee'
+        //   }
+        // )
         
         return bet
       }

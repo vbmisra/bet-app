@@ -32,6 +32,17 @@ export const ADD_USER = gql`
   }
 `;
 
+export const ADD_BET = gql `
+  mutation addBet ($nominees: ID!, $money: Float!){
+    addBet(nominees:$nominees,money: $money) {
+      _id
+      nominees {
+        _id
+      }
+    }
+  }
+`
+
 export const BET_MONEY = gql `
   mutation betMoney ($_id: ID!, $bet: Int!){
     betMoney(_id: $_id, bet: $bet) {

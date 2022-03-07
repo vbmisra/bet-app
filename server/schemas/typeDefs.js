@@ -17,7 +17,8 @@ const typeDefs = gql`
   type Bet {
     _id: ID
     betDate: String
-    nominees: [Nominee]
+    money: Float
+    nominees: Nominee
   }
 
   type User {
@@ -42,7 +43,7 @@ const typeDefs = gql`
   type Query {
     user: User
     users: [User]
-    bet(_id: ID): Bet
+    bet(_id: ID!): Bet
     friends(_id: ID!): User
     userBalance: User
     picture: Category
@@ -73,7 +74,7 @@ const typeDefs = gql`
 
   type Mutation {
     addUser(userName: String!, email: String!, password: String!): User
-    addBet(nominees: [ID]!): Bet
+    addBet(nominees: ID!, money: Float!): Bet
     login(email: String!, password: String!): Auth
     addCategory(title: String!): Category
     addNominee(nominee: String!): Nominee

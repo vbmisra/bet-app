@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+// const Nominee = require('./Nominee').schema;
 
 const { Schema } = mongoose;
 
@@ -10,12 +11,11 @@ const betSchema = new Schema({
   money: {
       type: Number
   },
-  nominees: [
-    {
+  nominees: {
       type: Schema.Types.ObjectId,
       ref: 'Nominee'
-    }
-  ]
+    },
+  
 });
 
 const Bet = mongoose.model('Bet', betSchema);
