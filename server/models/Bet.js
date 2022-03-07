@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+// const Nominee = require('./Nominee').schema;
 
 const { Schema } = mongoose;
 
@@ -13,7 +14,7 @@ const betSchema = new Schema({
   nominees: {
       type: Schema.Types.ObjectId,
       ref: 'Nominee'
-    }
+    },
   
 });
 

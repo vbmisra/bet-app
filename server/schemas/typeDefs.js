@@ -17,7 +17,7 @@ const typeDefs = gql`
   type Bet {
     _id: ID
     betDate: String
-    money: Int
+    money: Float
     nominees: Nominee
   }
 
@@ -74,7 +74,7 @@ const typeDefs = gql`
 
   type Mutation {
     addUser(userName: String!, email: String!, password: String!): User
-    addBet(_id: ID!, money: Int!): Bet
+    addBet(nominees: ID!, money: Float!): Bet
     login(email: String!, password: String!): Auth
     addCategory(title: String!): Category
     addNominee(nominee: String!): Nominee

@@ -9,12 +9,13 @@ const resolvers = {
     // query user
     user: async(parent, args, context) => {
       if (context.user) {
-        const user = await User.findOne({_id: context.user._id}).select('-__v -password').populate(
-          {
-            path: 'Choices.nominees',
-            populate: 'nominee'
-          }
-        )
+        const user = await User.findOne({_id: context.user._id}).select('-__v -password')
+        // .populate(
+        //   {
+        //     path: 'Choices.nominees',
+        //     populate: 'nominee'
+        //   }
+        // )
 
        
         // user.choices.sort((a, b) => b.money - a.money)
@@ -190,7 +191,12 @@ const resolvers = {
         const bet = await Bet.create(args)
 
         await User.findByIdAndUpdate(context.user._id, { $push: { Choices: bet } })
-        // await User.findById(context.user._id).populate()
+        // await User.findById(context.user._id).populate(
+        //   {
+        //     path: 'Choices.nominees',
+        //     populate: 'nominee'
+        //   }
+        // )
         
         return bet
       }

@@ -44,6 +44,7 @@ export const QUERY_BETS = gql`
       nominees {
         _id
         nominee
+        category
       }
     }
   }

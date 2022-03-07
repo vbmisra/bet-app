@@ -33,8 +33,8 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_BET = gql `
-  mutation addBet ($_id: ID!, $money: Int!){
-    addBet(_id:$_id,money: $money) {
+  mutation addBet ($nominees: ID!, $money: Float!){
+    addBet(nominees:$nominees,money: $money) {
       _id
       nominees {
         _id
