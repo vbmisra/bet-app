@@ -1,4 +1,5 @@
-import { PlusIcon } from '@heroicons/react/solid'
+// import { PlusIcon } from '@heroicons/react/solid'
+import { Link } from 'react-router-dom'
 
 const people = [
     {
@@ -97,15 +98,16 @@ const people = [
       <h3 className="mt-2 text-sm font-medium text-neutral-50">No bets yet.</h3>
       <p className="mt-1 text-sm text-gray-500">Use your balance to place bets.</p>
       <div className="mt-6">
-        
-        <button
+      <button className="btn btn-ghost normal-case text-xl"><Link to="/page1">Place Bets</Link></button>
+
+        {/* <button
           type="button"
           className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
         >
           
-          <PlusIcon className="-ml-1 mr-2 h-5 w-5" aria-hidden="true" />
+          <PlusIcon to='./page1' className="-ml-1 mr-2 h-5 w-5" aria-hidden="true" />
           Place Bets
-        </button>
+        </button> */}
       </div>
     </div>
     )}
