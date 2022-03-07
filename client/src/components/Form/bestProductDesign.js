@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 export default function BestProductDesign() {
   const [showModal, setShowModal] = React.useState(false);
   const nominees = [
-    { id: 1, name: '', info:'()' },
-    { id: 2, name: '', info:'()' },
-    { id: 3, name: '', info:'()' },
-    { id: 4, name: '', info:' ()' },
-    { id: 5, name: '', info:' ()' }
+    { id: 1, name: 'Dune', info:'production design: Patrice Vermette; set decoration: Zsuzsanna Sipos' },
+    { id: 2, name: 'Nightmare Alley', info:'Tamara Deverell; set decoration: Shane Vieau' },
+    { id: 3, name: 'The Power of the Dog', info:'production design: Grant Major; set decoration: Amber Richards' },
+    { id: 4, name: 'The Tragedy of Macbeth', info:'production design: Stefan Dechant; set decoration: Nancy Haigh' },
+    { id: 5, name: 'West Side Story', info:'production design: Adam Stockhausen; set decoration: Rena DeAngelo' }
   ]
   
   return (

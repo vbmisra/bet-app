@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 export default function BestDirector() {
   // const [showModal, setShowModal] = React.useState(false);
   const nominees = [
-    { id: 1, name: 'Paul Thomas Anderson', info:'(Licorice Pizza)' },
-    { id: 2, name: 'Kenneth Branagh', info:'(Belfast)' },
-    { id: 3, name: 'Jane Campion', info:'(The Power of the Dog)' },
-    { id: 4, name: 'Ryûsuke Hamaguchi', info:' (Drive My Car)' },
-    { id: 5, name: 'Steven Spielberg', info:' (West Side Story)' }
+    { id: 1, name: 'Paul Thomas Anderson', info:'"Licorice Pizza"' },
+    { id: 2, name: 'Kenneth Branagh', info:'"Belfast"' },
+    { id: 3, name: 'Jane Campion', info:'"The Power of the Dog"' },
+    { id: 4, name: 'Ryûsuke Hamaguchi', info:' "Drive My Car"' },
+    { id: 5, name: 'Steven Spielberg', info:' "West Side Story"' }
   ]
   
   return (

@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 export default function BestOriginalSong() {
   const [showModal, setShowModal] = React.useState(false);
   const nominees = [
-    { id: 1, name: '', info:'()' },
-    { id: 2, name: '', info:'()' },
-    { id: 3, name: '', info:'()' },
-    { id: 4, name: '', info:' ()' },
-    { id: 5, name: '', info:' ()' }
+    { id: 1, name: '“Be Alive” ', info:'music and lyrics by DIXSON and Beyoncé Knowles-Carter (King Richard)' },
+    { id: 2, name: '“Dos Oruguitas”', info:'music and lyrics by Lin-Manuel Miranda (Encanto)' },
+    { id: 3, name: '“Down to Joy”', info:'music and lyrics by Van Morrison (Belfast)' },
+    { id: 4, name: '“No Time to Die”', info:'music and lyrics by Billie Eilish and Finneas O’Connell (No Time to Die)' },
+    { id: 5, name: '“Somehow You Do” ', info:'music and lyrics by Diane Warren (Four Good Days)' }
   ]
   
   return (

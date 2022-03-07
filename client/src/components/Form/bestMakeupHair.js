@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 export default function BestMakeupHair() {
   // const [showModal, setShowModal] = React.useState(false);
   const nominees = [
-    { id: 1, name: '', info:'()' },
-    { id: 2, name: '', info:'()' },
-    { id: 3, name: '', info:'()' },
-    { id: 4, name: '', info:' ()' },
-    { id: 5, name: '', info:' ()' }
+    { id: 1, name: 'Coming 2 America', info:'"Mike Marino, Stacey Morris and Carla Farmer"' },
+    { id: 2, name: 'Cruella ', info:'"Nadia Stacey, Naomi Donne and Julia Vernon"' },
+    { id: 3, name: 'Dune ', info:'"Donald Mowat, Love Larson and Eva von Bahr"' },
+    { id: 4, name: 'The Eyes of Tammy Faye', info:' "Linda Dowds, Stephanie Ingram and Justin Raleigh"' },
+    { id: 5, name: 'House of Gucci', info:' "Göran Lundström, Anna Carin Lock and Frederic Aspiras"' }
   ]
   
   return (

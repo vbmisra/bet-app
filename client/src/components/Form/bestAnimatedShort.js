@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 export default function BestAnimatedShort() {
   // const [showModal, setShowModal] = React.useState(false);
   const nominees = [
-    { id: 1, name: '', info:'()' },
-    { id: 2, name: '', info:'()' },
-    { id: 3, name: '', info:'()' },
-    { id: 4, name: '', info:' ()' },
-    { id: 5, name: '', info:' ()' }
+    { id: 1, name: 'Affairs of the Art ', info:'"Joanna Quinn and Les Mills"' },
+    { id: 2, name: '', info:'"Hugo Covarrubias and Tevo Díaz"' },
+    { id: 3, name: '', info:'"Anton Dyakov"' },
+    { id: 4, name: '', info:' "Dan Ojari and Mikey Please"' },
+    { id: 5, name: '', info:' "Alberto Mielgo and Leo Sanchez"' }
   ]
   
   return (

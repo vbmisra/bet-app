@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 export default function BestInternationalFeature() {
 //   const [showModal, setShowModal] = React.useState(false);
   const nominees = [
-    { id: 1, name: '', info:'()' },
-    { id: 2, name: '', info:'()' },
-    { id: 3, name: '', info:'()' },
-    { id: 4, name: '', info:' ()' },
-    { id: 5, name: '', info:' ()' }
+    { id: 1, name: 'Drive My Car ', info:'"Japan"' },
+    { id: 2, name: 'Flee', info:'"Denmark"' },
+    { id: 3, name: 'The Hand of God ', info:'"Italy"' },
+    { id: 4, name: 'Lunana: A Yak in the Classroom', info:' "Bhutan"' },
+    { id: 5, name: 'The Worst Person in the World ', info:' "Norway"' }
   ]
   
   return (

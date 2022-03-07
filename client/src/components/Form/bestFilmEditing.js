@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 export default function BestFilmEditing() {
   // const [showModal, setShowModal] = React.useState(false);
   const nominees = [
-    { id: 1, name: '', info:'()' },
-    { id: 2, name: '', info:'()' },
-    { id: 3, name: '', info:'()' },
-    { id: 4, name: '', info:' ()' },
-    { id: 5, name: '', info:' ()' }
+    { id: 1, name: 'Don’t Look Up', info:'"Hank Corwin"' },
+    { id: 2, name: 'Dune ', info:'"Joe Walker"' },
+    { id: 3, name: 'King Richard', info:'"Pamela Martin"' },
+    { id: 4, name: 'The Power of the Dog', info:' "Peter Sciberras"' },
+    { id: 5, name: 'Tick, Tick … Boom! ', info:' "Myron Kerstein and Andrew Weisblum"' }
   ]
   
   return (
