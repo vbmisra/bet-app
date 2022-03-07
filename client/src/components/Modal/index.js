@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const nominees = [
   { id: null, name: 'None' },
@@ -44,7 +43,34 @@ export default function Modal() {
                   </button>
                 </div>
                 {/*body*/}
-                
+                <div className="relative p-6 flex-auto">
+                <fieldset>
+      <legend className="text-lg font-medium text-gray-900">nominees</legend>
+      <div className="mt-4 border-t border-b border-gray-200 divide-y divide-gray-200">
+        {nominees.map((nominees, nomineesIdx) => (
+          <div key={nomineesIdx} className="relative flex items-start py-4">
+            <div className="min-w-0 flex-1 text-sm">
+              <label htmlFor={`nominees-${nominees.id}`} className="font-medium text-gray-700 select-none">
+                {nominees.name}
+              </label>
+            </div>
+            <div className="ml-3 flex items-center h-5">
+              <input
+                id={`nominees-${nominees.id}`}
+                name="plan"
+                type="radio"
+                defaultChecked={nominees.id === null}
+                className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+    </fieldset>
+                  <p className="my-4 text-blueGray-500 text-lg leading-relaxed">
+                    {/* nominees */}
+                  </p>
+                </div>
                 {/*footer*/}
                 <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
                   
