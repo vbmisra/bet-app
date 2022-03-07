@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 export default function BestAnimatedFeature() {
   // const [showModal, setShowModal] = React.useState(false);
   const nominees = [
-    { id: 1, name: '', info:'()' },
-    { id: 2, name: '', info:'()' },
-    { id: 3, name: '', info:'()' },
-    { id: 4, name: '', info:' ()' },
-    { id: 5, name: '', info:' ()' }
+    { id: 1, name: 'Encanto', info:'Jared Bush, Byron Howard, Yvett Merino and Clark Spencer' },
+    { id: 2, name: 'Flee', info:'Jonas Poher Rasmussen, Monica Hellström, Signe Byrge Sørensen and Charlotte De La Gournerie' },
+    { id: 3, name: 'Luca', info:'Enrico Casarosa and Andrea Warren' },
+    { id: 4, name: 'The Mitchells vs. the Machines', info:'Mike Rianda, Phil Lord, Christopher Miller and Kurt Albrecht' },
+    { id: 5, name: 'Raya and the Last Dragon', info:' ' }
   ]
   
   return (

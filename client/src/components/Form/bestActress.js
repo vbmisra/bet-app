@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 export default function BestActress() {
   // const [showModal, setShowModal] = React.useState(false);
   const nominees = [
-    { id: 1, name: 'Jessica Chastain', info:'(The Eyes of Tammy Faye)' },
-    { id: 2, name: 'Olivia Colman', info:'(The Lost Daughter)' },
-    { id: 3, name: 'Penélope Cruz', info:'(Parallel Mothers)' },
-    { id: 4, name: 'Nicole Kidman', info:' (Being the Ricardos)' },
-    { id: 5, name: 'Kristen Stewart', info:' (Spencer)' }
+    { id: 1, name: 'Jessica Chastain', info:'"The Eyes of Tammy Faye"' },
+    { id: 2, name: 'Olivia Colman', info:'"The Lost Daughter"' },
+    { id: 3, name: 'Penélope Cruz', info:'"Parallel Mothers"' },
+    { id: 4, name: 'Nicole Kidman', info:' "Being the Ricardos"' },
+    { id: 5, name: 'Kristen Stewart', info:' "Spencer"' }
   ]
   
   return (

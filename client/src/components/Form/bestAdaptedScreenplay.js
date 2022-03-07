@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 export default function BestAdaptedScreenplay() {
   // const [showModal, setShowModal] = React.useState(false);
   const nominees = [
-    { id: 1, name: '', info:'()' },
-    { id: 2, name: '', info:'()' },
-    { id: 3, name: '', info:'()' },
-    { id: 4, name: '', info:' ()' },
-    { id: 5, name: '', info:' ()' }
+    { id: 1, name: 'CODA', info:'"screenplay by Siân Heder"' },
+    { id: 2, name: 'Drive My Car', info:'"screenplay by Ryusuke Hamaguchi, Takamasa Oe"' },
+    { id: 3, name: 'Dune', info:'"screenplay by Jon Spaihts and Denis Villeneuve and Eric Roth"' },
+    { id: 4, name: 'The Lost Daughter', info:' "written by Maggie Gyllenhaal"' },
+    { id: 5, name: 'The Power of the Dog', info:' "written by Jane Campion"' }
   ]
   
   return (
