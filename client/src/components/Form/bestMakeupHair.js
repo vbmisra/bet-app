@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
-export default function BestMakupHair() {
+export default function BestMakeupHair() {
   // const [showModal, setShowModal] = React.useState(false);
   const nominees = [
     { id: 1, name: '', info:'()' },
@@ -22,7 +22,7 @@ export default function BestMakupHair() {
             <div className="justify-center flex items-start p-5 border-b border-solid border-blueGray-200 rounded-t">
               <h3 className="text-3xl font-semi-bold justify-center">
 
-              Best Actress:
+              Best Makeup and Hairstyling:
               
               </h3>
             </div>
@@ -55,7 +55,7 @@ export default function BestMakupHair() {
       </div>
     </fieldset>
     </div>
-            <button className="btn btn-ghost normal-case text-xl"><Link to="/bestdirector">Place your next bet! </Link></button>
+            <button className="btn btn-ghost normal-case text-xl"><Link to="/bestOriginalScore">Place your next bet! </Link></button>
           </div>
   </div>
     </>

@@ -41,6 +41,7 @@ import BestSupActress from './components/Form/bestSupActress';
 import BestVisualEffects from './components/Form/bestVisualEffects';
 import BestActress from './components/Form/bestActress';
 import BestActor from './components/Form/bestActor';
+import submitSurvey from './components/Form/submitSurvey';
 
 
 const httpLink = createHttpLink({
@@ -100,6 +101,7 @@ function App() {
                <Route exact path="/bestSupActor" component={BestSupActor} /> 
                <Route exact path="/bestSupActress" component={BestSupActress} /> 
                <Route exact path="/bestVisualEffects" component={BestVisualEffects} /> 
+               <Route exact path="/submitSurvey" component={submitSurvey} /> 
             </Switch>
           </Provider>
         </div>

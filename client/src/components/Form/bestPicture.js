@@ -62,7 +62,7 @@ export default function BestPicture() {
     </fieldset>
     </div>
 
-            <button className="btn btn-ghost normal-case text-xl"><Link to="/bestdirector">Place your next bet! </Link></button>
+            <button className="btn btn-ghost normal-case text-xl"><Link to="/bestProductDesign">Place your next bet! </Link></button>
           </div>
   </div>
     </>

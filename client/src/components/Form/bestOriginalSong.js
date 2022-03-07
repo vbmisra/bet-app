@@ -22,7 +22,7 @@ export default function BestOriginalSong() {
             <div className="justify-center flex items-start p-5 border-b border-solid border-blueGray-200 rounded-t">
               <h3 className="text-3xl font-semi-bold justify-center">
 
-              Best Actress:
+              Best Original Song:
               
               </h3>
             </div>
@@ -55,7 +55,7 @@ export default function BestOriginalSong() {
       </div>
     </fieldset>
     </div>
-            <button className="btn btn-ghost normal-case text-xl"><Link to="/bestdirector">Place your next bet! </Link></button>
+            <button className="btn btn-ghost normal-case text-xl"><Link to="/bestPicture">Place your next bet! </Link></button>
           </div>
   </div>
     </>
