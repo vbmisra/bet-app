@@ -1,7 +1,7 @@
 import React from 'react';
-import {Link} from'react-router-dom'
+import { Link } from "react-router-dom";
 
-export default function classy() {
+export default function Example() {
   return (
     
     <div className="bg-gray-50">
@@ -10,10 +10,11 @@ export default function classy() {
           <span className="block">Ready to bet?</span>
           <span className="block text-indigo-600">Lets get started!</span>
         </h2>
+        
         <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
           <div className="inline-flex rounded-md shadow">
           <Link 
-          to="/picks"
+          to="/bestActor"
           className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
               Bet!
             </Link>
