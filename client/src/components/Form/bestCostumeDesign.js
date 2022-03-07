@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 export default function BestCostumeDesign() {
   // const [showModal, setShowModal] = React.useState(false);
   const nominees = [
-    { id: 1, name: '', info:'()' },
-    { id: 2, name: '', info:'()' },
-    { id: 3, name: '', info:'()' },
-    { id: 4, name: '', info:' ()' },
-    { id: 5, name: '', info:' ()' }
+    { id: 1, name: 'Cruella', info:'"Jenny Beavan"' },
+    { id: 2, name: 'Cyrano', info:'"Massimo Cantini Parrini and Jacqueline Durran"' },
+    { id: 3, name: 'Dune', info:'"Jacqueline West and Robert Morgan"' },
+    { id: 4, name: 'Nightmare Alley', info:' "Luis Sequeira"' },
+    { id: 5, name: 'West Side Story', info:' "Paul Tazewell"' }
   ]
   
   return (

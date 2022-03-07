@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 export default function BestDocumentaryShort() {
   // const [showModal, setShowModal] = React.useState(false);
   const nominees = [
-    { id: 1, name: '', info:'()' },
-    { id: 2, name: '', info:'()' },
-    { id: 3, name: '', info:'()' },
-    { id: 4, name: '', info:' ()' },
-    { id: 5, name: '', info:' ()' }
+    { id: 1, name: 'Audible', info:'"Matt Ogens and Geoff McLean"' },
+    { id: 2, name: 'Lead Me Home', info:'"Pedro Kos and Jon Shenk)"' },
+    { id: 3, name: 'The Queen of Basketball ', info:'"Ben Proudfoot"' },
+    { id: 4, name: 'Three Songs for Benazir', info:' "Elizabeth Mirzaei and Gulistan Mirzaei"' },
+    { id: 5, name: 'When We Were Bullies ', info:' "Jay Rosenblatt"' }
   ]
   
   return (

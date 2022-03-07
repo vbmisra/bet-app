@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 export default function BestCinematography() {
 //   const [showModal, setShowModal] = React.useState(false);
   const nominees = [
-    { id: 1, name: '', info:'()' },
-    { id: 2, name: '', info:'()' },
-    { id: 3, name: '', info:'()' },
-    { id: 4, name: '', info:' ()' },
-    { id: 5, name: '', info:' ()' }
+    { id: 1, name: 'Dune', info:'"Greig Fraser"' },
+    { id: 2, name: 'Nightmare Alley', info:'"Dan Laustsen"' },
+    { id: 3, name: 'The Power of the Dog', info:'"Ari Wegner"' },
+    { id: 4, name: 'The Tragedy of Macbeth ', info:' "Bruno Delbonnel"' },
+    { id: 5, name: 'West Side Story', info:' "Janusz Kaminski"' }
   ]
   
   return (

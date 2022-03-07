@@ -3,19 +3,18 @@ import { Link } from "react-router-dom";
 
 
 export default function BestPicture() {
-  const [showModal, setShowModal] = React.useState(false);
+  // const [showModal, setShowModal] = React.useState(false);
   const nominees = [
-    { id: 1, name: 'Belfast', info:'(Laura Berwick, Kenneth Branagh, Becca Kovacik and Tamar Thomas, Producers)' },
-    { id: 2, name: 'CODA', info:'(Philippe Rousselet, Fabrice Gianfermi and Patrick Wachsberger, Producers)' },
-    { id: 3, name: 'Don’t Look Up', info:'(Adam McKay and Kevin Messick, Producers)' },
-    { id: 4, name: 'Drive My Car', info:'(Teruhisa Yamamoto, Producer)' },
-    { id: 5, name: 'Dune', info:' (Mary Parent, Denis Villeneuve and Cale Boyter, Producers)' },
-    { id: 6, name: 'King Richard', info:' (Tim White, Trevor White and Will Smith, Producers)' },
-    { id: 7, name: 'Licorice Pizza', info:' (Sara Murphy, Adam Somner and Paul Thomas Anderson, Producers)' },
-    { id: 8, name: 'Nightmare Alley', info:' (Guillermo del Toro, J. Miles Dale and Bradley Cooper, Producers)' },
-    { id: 9, name: 'The Power of the Dog', info:' (Jane Campion, Tanya Seghatchian, Emile' },
-    { id: 10, name: 'Sherman, Iain Canning and Roger Frappier, Producers)' },
-    { id: 11, name: 'West Side Story', info:' (Steven Spielberg and Kristie Macosko Krieger, Producers)' }
+    { id: 1, name: 'Belfast', info:'Laura Berwick, Kenneth Branagh, Becca Kovacik and Tamar Thomas, Producers' },
+    { id: 2, name: 'CODA', info:'Philippe Rousselet, Fabrice Gianfermi and Patrick Wachsberger, Producers' },
+    { id: 3, name: 'Don’t Look Up', info:'Adam McKay and Kevin Messick, Producers' },
+    { id: 4, name: 'Drive My Car', info:'Teruhisa Yamamoto, Producer' },
+    { id: 5, name: 'Dune', info:' Mary Parent, Denis Villeneuve and Cale Boyter, Producers' },
+    { id: 6, name: 'King Richard', info:' Tim White, Trevor White and Will Smith, Producers' },
+    { id: 7, name: 'Licorice Pizza', info:' Sara Murphy, Adam Somner and Paul Thomas Anderson, Producers' },
+    { id: 8, name: 'Nightmare Alley', info:' Guillermo del Toro, J. Miles Dale and Bradley Cooper, Producers' },
+    { id: 9, name: 'The Power of the Dog', info:' Jane Campion, Tanya Seghatchian, Emile Sherman, Iain Canning and Roger Frappier, Producers' },
+    { id: 10, name: 'West Side Story', info:' Steven Spielberg and Kristie Macosko Krieger, Producers' }
   ]
   
   return (
@@ -62,7 +61,7 @@ export default function BestPicture() {
     </fieldset>
     </div>
 
-            <button className="btn btn-ghost normal-case text-xl"><Link to="/bestProductDesign">Place your next bet! </Link></button>
+            <button className="btn btn-ghost normal-case text-xl"><Link to="/bestdirector">Place your next bet! </Link></button>
           </div>
   </div>
     </>

@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 export default function BestOriginalScreenplay() {
   const [showModal, setShowModal] = React.useState(false);
   const nominees = [
-    { id: 1, name: '', info:'()' },
-    { id: 2, name: '', info:'()' },
-    { id: 3, name: '', info:'()' },
-    { id: 4, name: '', info:' ()' },
-    { id: 5, name: '', info:' ()' }
+    { id: 1, name: 'Belfast', info:'"Kenneth Branagh"' },
+    { id: 2, name: 'Don’t Look Up', info:'""' },
+    { id: 3, name: 'King Richard', info:'""' },
+    { id: 4, name: 'Licorice Pizza', info:' ""' },
+    { id: 5, name: 'The Worst Person in the World ', info:' "written by Eskil Vogt, Joachim Trier)"' }
   ]
   
   return (

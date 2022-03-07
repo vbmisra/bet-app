@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 export default function BestDocumentaryFeature() {
 //   const [showModal, setShowModal] = React.useState(false);
   const nominees = [
-    { id: 1, name: '', info:'()' },
-    { id: 2, name: '', info:'()' },
-    { id: 3, name: '', info:'()' },
-    { id: 4, name: '', info:' ()' },
-    { id: 5, name: '', info:' ()' }
+    { id: 1, name: 'Ascension', info:'"Jessica Kingdon, Kira Simon-Kennedy and Nathan Truesdell"' },
+    { id: 2, name: 'Attica', info:'"Stanley Nelson and Traci A. Curry"' },
+    { id: 3, name: 'Flee', info:'"Jonas Poher Rasmussen, Monica Hellström, Signe Byrge Sorensen and Charlotte De La Gournerie"' },
+    { id: 4, name: 'Summer of Soul', info:' "Ahmir “Questlove” Thompson, Joseph Patel, Robert Fyvolent and David Dinerstein"' },
+    { id: 5, name: 'Writing With Fire', info:' "Rintu Thomas and Sushmit Ghosh"' }
   ]
   
   return (

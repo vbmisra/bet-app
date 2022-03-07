@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 export default function BestLiveActionShort() {
   // const [showModal, setShowModal] = React.useState(false);
   const nominees = [
-    { id: 1, name: '', info:'()' },
-    { id: 2, name: '', info:'()' },
-    { id: 3, name: '', info:'()' },
-    { id: 4, name: '', info:' ()' },
-    { id: 5, name: '', info:' ()' }
+    { id: 1, name: 'Ala Kachuu — Take and Run', info:'"Maria Brendle and Nadine Lüchinger"' },
+    { id: 2, name: 'The Dress', info:'"Tadeusz Lysiak and Maciej Ślesicki"' },
+    { id: 3, name: 'The Long Goodbye', info:'"Aneil Karia and Riz Ahmed"' },
+    { id: 4, name: 'On My Mind ', info:' "Martin Strange-Hansen and Kim Magnusson"' },
+    { id: 5, name: 'Please Hold ', info:' "K.D. Dávila and Levin Menekse"' }
   ]
   
   return (
