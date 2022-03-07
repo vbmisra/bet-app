@@ -10,12 +10,11 @@ const betSchema = new Schema({
   money: {
       type: Number
   },
-  nominees: [
-    {
+  nominees: {
       type: Schema.Types.ObjectId,
       ref: 'Nominee'
     }
-  ]
+  
 });
 
 const Bet = mongoose.model('Bet', betSchema);
