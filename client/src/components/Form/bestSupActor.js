@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 export default function BestSupActor() {
   const [showModal, setShowModal] = React.useState(false);
   const nominees = [
-    { id: 1, name: '', info:'()' },
-    { id: 2, name: '', info:'()' },
-    { id: 3, name: '', info:'()' },
-    { id: 4, name: '', info:' ()' },
-    { id: 5, name: '', info:' ()' }
+    { id: 1, name: 'Javier Bardem', info:'Being the Ricardos' },
+    { id: 2, name: 'Benedict Cumberbatch', info:'The Power of the Dog' },
+    { id: 3, name: 'Andrew Garfield', info:'Tick, Tick … Boom!' },
+    { id: 4, name: 'Will Smith', info:'King Richard' },
+    { id: 5, name: 'Denzel Washington', info:'The Tragedy of Macbeth' }
   ]
   
   return (

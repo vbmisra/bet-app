@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 export default function BestSound() {
   const [showModal, setShowModal] = React.useState(false);
   const nominees = [
-    { id: 1, name: '', info:'()' },
-    { id: 2, name: '', info:'()' },
-    { id: 3, name: '', info:'()' },
-    { id: 4, name: '', info:' ()' },
-    { id: 5, name: '', info:' ()' }
+    { id: 1, name: 'Belfast ', info:'Denise Yarde, Simon Chase, James Mather and Niv Adiri' },
+    { id: 2, name: 'Dune ', info:'Mac Ruth, Mark Mangini, Theo Green, Doug Hemphill and Ron Bartlett)' },
+    { id: 3, name: 'No Time to Die', info:'Simon Hayes, Oliver Tarney, James Harrison, Paul Massey and Mark Taylor' },
+    { id: 4, name: 'The Power of the Dog ', info:'Richard Flynn, Robert Mackenzie and Tara Webb' },
+    { id: 5, name: 'West Side Story', info:'Tod A. Maitland, Gary Rydstrom, Brian Chumney, Andy Nelson and Shawn Murphy' }
   ]
   
   return (

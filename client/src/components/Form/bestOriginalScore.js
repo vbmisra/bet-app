@@ -6,7 +6,7 @@ export default function BestOriginalScore() {
   // const [showModal, setShowModal] = React.useState(false);
   const nominees = [
     { id: 1, name: 'Don’t Look Up', info:'"Nicholas Britell"' },
-    { id: 2, name: 'Dune', info:'"Hans Zimmer)"' },
+    { id: 2, name: 'Dune', info:'"Hans Zimmer"' },
     { id: 3, name: 'Encanto', info:'"Germaine Franco"' },
     { id: 4, name: 'Parallel Mothers', info:' "Alberto Iglesias"' },
     { id: 5, name: 'The Power of the Dog', info:' "Jonny Greenwood"' }

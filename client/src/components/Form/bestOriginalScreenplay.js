@@ -6,9 +6,9 @@ export default function BestOriginalScreenplay() {
   const [showModal, setShowModal] = React.useState(false);
   const nominees = [
     { id: 1, name: 'Belfast', info:'"Kenneth Branagh"' },
-    { id: 2, name: 'Don’t Look Up', info:'""' },
-    { id: 3, name: 'King Richard', info:'""' },
-    { id: 4, name: 'Licorice Pizza', info:' ""' },
+    { id: 2, name: 'Don’t Look Up', info:'screenplay by Adam McKay; story by Adam McKay & David Sirota"' },
+    { id: 3, name: 'King Richard', info:'"written by Zach Baylin"' },
+    { id: 4, name: 'Licorice Pizza', info:' "written by Paul Thomas Anderson"' },
     { id: 5, name: 'The Worst Person in the World ', info:' "written by Eskil Vogt, Joachim Trier)"' }
   ]
   
