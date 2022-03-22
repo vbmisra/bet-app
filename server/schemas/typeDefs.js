@@ -73,7 +73,7 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    addUser(userName: String!, email: String!, password: String!): User
+    addUser(userName: String!, email: String!, password: String!): Auth
     addBet(nominees: ID!, money: Float!): Bet
     login(email: String!, password: String!): Auth
     addCategory(title: String!): Category
@@ -90,3 +90,5 @@ const typeDefs = gql`
 `;
 
 module.exports = typeDefs;
+
+// user id: 62392f6cdd2d6b16ac4179e4
