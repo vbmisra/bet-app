@@ -5,7 +5,7 @@ const path = require('path');
 const { typeDefs, resolvers } = require('./schemas');
 const { authMiddleware } = require('./utils/auth');
 const db = require('./config/connection');
-const routes = require('./routes');
+// const routes = require('./routes');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -19,7 +19,7 @@ server.applyMiddleware({ app });
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(routes);
+// app.use(routes);
 
 // Serve up static assets
 // app.use('/images', express.static(path.join(__dirname, '../client/images')));
